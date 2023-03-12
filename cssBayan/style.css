@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 1.7em;
+}
+
+header {
+    margin-top: 10rem;
+}
+
+h1 {
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+img {
+    height: 30rem;
+    width: 30rem;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.accordion {
+    text-align: center;
+}
+
+.icon {
+    display: none;
+    transform: rotate(45deg);
+    width: 2%;
+    height: 2%;
+    fill: white;
+}
+
+.description {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: red;
+    padding: 1rem 0 1rem 0;
+}
+
+.dropdown-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown {
+    display: inline-block;
+    border-top: 0.05rem solid white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.accordion:hover .description {
+    color: white;
+}
+
+.accordion:hover .icon {
+    display: initial;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: black;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .icon {
+    transform: rotate(0deg);
+}
