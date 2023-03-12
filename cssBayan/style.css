@@ -1,22 +1,35 @@
+@media screen and (max-width: 1920px) {
+    .container { width: 80%; }
+}
+
+@media screen and (max-width: 820px) {
+    .container { width: 90%; }
+}
+
+@media screen and (max-width: 320px) {
+    .container { width: 100%; }
+    body { margin: 1vw 0;
+    }
+}
+
 body {
     background-color: black;
     font-family: 'Ubuntu', sans-serif;
     color: white;
-    font-size: 1.7em;
 }
 
 header {
-    margin-top: 10rem;
+    margin-top: 20vh;
 }
 
 h1 {
+    font-size: 5vw;
     font-weight: 700;
     margin: 0 auto;
 }
 
 img {
-    height: 30rem;
-    width: 30rem;
+ max-width: 100%;
 }
 
 .container {
@@ -30,17 +43,18 @@ img {
 
 .icon {
     display: none;
-    transform: rotate(45deg);
-    width: 2%;
-    height: 2%;
+    transform: rotate(225deg);
+    padding: 1.5vh 0 1.5vh 0;
+    width: 3vh;
+    height: 3vh;
     fill: white;
 }
 
 .description {
-    font-size: 1.1em;
+    font-size: 3vw; 
     font-weight: 500;
     color: red;
-    padding: 1rem 0 1rem 0;
+    padding: 1.5vh 0 1.5vh 0;
 }
 
 .dropdown-description {
@@ -50,13 +64,15 @@ img {
 
 .dropdown {
     display: inline-block;
-    border-top: 0.05rem solid white;
+    border-top: 0.1vw solid white;
     width: 100%;
     cursor: pointer;
 }
-.accordion input:checked ~ .dropdown-description .description,
-.accordion:hover .description {
+
+.accordion:hover .description,
+.accordion input:checked ~ .dropdown-description .description {
     color: white;
+    transition: 0.2s ease;
 }
 
 .accordion:hover .icon {
@@ -71,10 +87,13 @@ img {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    animation: growDown 0.3s ease-out;
+    transform-origin: top center;
 }
 
 .dropdown:hover .icon {
     transform: rotate(0deg);
+    transition: 0.2s ease;
 }
 
 .dropdown:checked {
@@ -88,3 +107,17 @@ input {
 input:checked~.dropdown-content {
     display: block;
 }
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+
+
+
+
