@@ -16,8 +16,33 @@
     .description { font-size: 5vw; } 
 }
 
+@media screen and (min-width: 1921px) {
+    .container { width: 80%; }
+    h1 { font-size: 5vw; }
+    .description { font-size: 3vw; } 
+}
+
 @media (hover: hover) {
-/*  медиа запрос о поддержке ховера устройством здесь пустой (его можно было вообще не писать), так как данная реализация интерфейса не имеет зависимости от поддержки ховера*/
+    .accordion:hover .description {
+        color: white;
+        transition: 0.2s ease;
+    }
+    
+    .accordion:hover .icon {
+        display: block;
+        transform: rotate(225deg);
+    }
+    
+    .dropdown:hover .icon {
+        transform: rotate(0deg);
+        transition: 0.3s ease;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+        animation: growDown 0.3s ease-out;
+        transform-origin: top center;
+    }
 }
 
 body {
